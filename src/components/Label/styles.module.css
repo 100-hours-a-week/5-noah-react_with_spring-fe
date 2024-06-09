@@ -1,0 +1,11 @@
+.label {
+    display: block;
+
+    text-align: left;
+
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    font-size: 15px;
+    font-weight: bold;
+}

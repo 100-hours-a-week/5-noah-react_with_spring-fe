@@ -1,0 +1,35 @@
+.commentContainer {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.createCommentForm {
+    border: none;
+    border-radius: 16px;
+
+    background-color: #FFFFFF;
+}
+
+.textarea {
+    padding: 16px;
+
+    width: 100%;
+    height: 205px;
+
+    box-sizing: border-box;
+
+    border: none;
+    border-radius: 16px;
+}
+
+.horizontalRule {
+    opacity: 0.16;
+}
+
+.createCommentFormSubmitButtonContainer {
+    text-align: right;
+}
+
+.comments {
+    padding: 16px;
+}

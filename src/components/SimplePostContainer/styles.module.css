@@ -1,0 +1,16 @@
+.SimplePostWrap {
+    width: 80%;
+
+    margin: auto;
+}
+
+.simplePostContainerTitle {
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    font-size: 24px;
+}
+
+.moveEditButtonContainer {
+    text-align: right;
+}

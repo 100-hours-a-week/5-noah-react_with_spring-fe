@@ -1,0 +1,56 @@
+.imageContainer {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.previewImage {
+    width: 149px;
+    height: 149px;
+
+    /* 원 모양 */
+    border-radius: 50%;
+
+    /* 이미지 경계 벗어나면 숨기기 */
+    overflow: hidden;
+
+    /* 부드러운 효과를 위한 전환 추가 */
+    transition: opacity 0.3s ease;
+}
+
+.hoverText {
+    /* 버튼 정 가운데 정렬 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 52px;
+
+    border: 1px solid white;
+    border-radius: 25px;
+
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+
+    /* 텍스트가 클릭 이벤트 방해 안함 */
+    pointer-events: none;
+}
+
+.imageContainer:hover .previewImage {
+    filter: brightness(0.7);
+}
+
+.imageContainer:hover .hoverText {
+    /* 텍스트 보이게 처리 */
+    opacity: 1;
+}
+
+.input {
+    display: none;
+}

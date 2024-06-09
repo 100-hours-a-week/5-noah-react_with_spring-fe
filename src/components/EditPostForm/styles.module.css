@@ -1,0 +1,11 @@
+.editPostForm {
+    width: 70%;
+
+    margin: 0 auto;
+}
+
+.editPostFormInputImageContainer {
+    margin-bottom: 16px;
+
+    text-align: left;
+}

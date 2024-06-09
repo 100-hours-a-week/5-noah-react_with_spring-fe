@@ -1,0 +1,32 @@
+.toast {
+    position: fixed; /* 고정 위치 */
+    left: 50%; /* 중앙 정렬 */
+    transform: translateX(-50%); /* X축 기준 중앙 정렬 보정 */
+    bottom: 10px; /* 초기 위치 설정 */
+
+    width: 102px;
+
+    margin: auto;
+
+    border-radius: 10px;
+
+    background-color: #ACA0EB;
+
+    font-size: 18px;
+
+    color: white;
+
+    /* 애니메이션 적용 */
+    animation: slideUp 1s ease-out forwards;
+}
+
+@keyframes slideUp {
+    from {
+        /* 시작 위치 */
+        bottom: 10px;
+    }
+    to {
+        /* 끝 위치 */
+        bottom: 100px;
+    }
+}

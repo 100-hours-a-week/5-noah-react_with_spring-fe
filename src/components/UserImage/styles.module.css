@@ -1,0 +1,7 @@
+.userImage {
+    /* 원 모양*/
+    border-radius: 50%;
+
+    /* 이미지 경계 벗어나면 숨기기 */
+    overflow: hidden;
+}

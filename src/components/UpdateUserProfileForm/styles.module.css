@@ -1,0 +1,16 @@
+.updateUserProfileForm {
+    width: 50%;
+
+    margin: 0 auto;
+}
+
+.userEmail {
+    display: block;
+
+    text-align: left;
+
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    font-size: 15px;
+}

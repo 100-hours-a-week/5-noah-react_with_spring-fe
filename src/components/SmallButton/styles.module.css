@@ -1,0 +1,12 @@
+.button {
+    margin-left: 5px;
+    margin-right: 5px;
+
+    border-width: 1px;
+    border-color: #ACA0AB;
+    border-radius: 8px;
+
+    background-color: #FFFFFF;
+
+    font-size: 15px;
+}

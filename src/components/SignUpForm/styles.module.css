@@ -1,0 +1,11 @@
+.signUpForm {
+    width: 50%;
+
+    margin: 0 auto;
+}
+
+.moveSignInText {
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+}

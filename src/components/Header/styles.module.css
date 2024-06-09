@@ -1,0 +1,60 @@
+.header {
+    height: 10vh;
+
+    border-bottom: 1px solid #000000;
+}
+
+.headerContainer {
+    width: 40%;
+    height: 100%;
+    margin: 0 auto;
+
+    /* 가로로 정렬 */
+    display: flex;
+
+    justify-content: space-between;
+
+    /* 세로 정렬 */
+    align-items: center;
+}
+
+.header .backButtonContainer {
+    width: 10%;
+}
+
+.header .userImageContainer {
+    width: 10%;
+}
+
+.dropdownMenu {
+    position: absolute;
+    /* 맥 전체화면 기준 UserImage 바로 아래에 위치 */
+    top: 8%;
+    left: 61%;
+
+    background-color: #D9D9D9;
+
+    width: 120px;
+}
+
+.dropdownMenu ul {
+    list-style: none;
+
+    padding: 0;
+    margin: auto;
+}
+
+.dropdownMenu li {
+    padding: 10px 24px 10px 24px;
+}
+
+.LinkText {
+    text-decoration: none;
+
+    font-size: 12px;
+    color: black;
+}
+
+.dropdownMenu li:hover {
+    background-color: #E9E9E9;
+}

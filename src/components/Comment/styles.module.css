@@ -1,0 +1,30 @@
+.container {
+    padding: 10px 10px 10px 10px;
+}
+
+.topContainer {
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.authorContainer {
+    display: flex;
+    align-items: center;
+}
+
+.authorName {
+    margin-left: 10px;
+    margin-right: 10px;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.content {
+    padding-left: 46px;
+    padding-right: 46px;
+
+    text-align: left;
+}
