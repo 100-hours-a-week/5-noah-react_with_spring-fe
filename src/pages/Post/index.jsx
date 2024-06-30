@@ -23,7 +23,7 @@ const PostPage = ({
     return (<>
         <Header useBackButton={true} useUserImage={useUserImage} imageSrc={imageUrl}/>
         <PostContainerWithLoading isSigned={useUserImage} signedNickname={signedNickname}
-                                  url={`http://localhost:8000/api/posts/${id}`}/>
+                                  url={`http://localhost:8080/api/posts/${id}`}/>
     </>);
 };
 

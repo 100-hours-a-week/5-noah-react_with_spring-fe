@@ -14,7 +14,7 @@ const withAuthAccess = (WrappedComponent, option) => {
             status,
             data,
         } = useFetch({
-            url: 'http://localhost:8000/api/check-auth',
+            url: 'http://localhost:8080/api/member',
             options: {
                 credentials: 'include',
             },
@@ -26,7 +26,7 @@ const withAuthAccess = (WrappedComponent, option) => {
 
         if (status === 200) {
             return <WrappedComponent useUserImage={true}
-                                     imageUrl={`http://localhost:8000/${data.imageUrl}`}
+                                     imageUrl={`${data.imageUrl}`}
                                      signedNickname={data.nickname} {...props}/>;
         } else {
             if (option) {

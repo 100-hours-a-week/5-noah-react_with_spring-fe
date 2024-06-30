@@ -31,8 +31,8 @@ const SimplePostContainer = ({
                 comments={simplePost.comments}
                 views={simplePost.views}
                 createdDate={simplePost.createdDate}
-                authorImageSrc={`http://localhost:8000/${simplePost.author.imageUrl}`}
-                authorName={simplePost.author.name}
+                authorImageSrc={simplePost.authorImageUrl}
+                authorName={simplePost.authorName}
             />))}
         </div>
     </MainContainer>);

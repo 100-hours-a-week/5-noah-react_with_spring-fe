@@ -30,7 +30,7 @@ const Comment = ({
     };
 
     const handleDeleteComment = () => {
-        fetch(`http://localhost:8000/api/posts/${postId}/comments/${commentId}`, {
+        fetch(`http://localhost:8080/api/comments/${commentId}`, {
             method: 'DELETE',
             credentials: 'include',
         }).then((response) => {

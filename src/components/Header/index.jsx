@@ -19,8 +19,8 @@ const Header = ({
     };
 
     const handleClickSignOut = () => {
-        fetch('http://localhost:8000/api/sign-out', {
-            method: 'DELETE',
+        fetch('http://localhost:8080/api/sign-out', {
+            method: 'POST',
             credentials: 'include',
         }).then((response) => {
             if (response.ok) {

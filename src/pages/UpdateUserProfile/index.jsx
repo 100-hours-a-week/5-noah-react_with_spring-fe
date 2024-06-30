@@ -12,7 +12,7 @@ const UpdateUserProfilePage = ({
     return (<>
         <Header useUserImage={useUserImage} imageSrc={imageUrl}></Header>
         <Body>
-            <UpdateUserProfileFormWithLoading url={'http://localhost:8000/api/users/update/image-and-nickname'}
+            <UpdateUserProfileFormWithLoading url={'http://localhost:8080/api/member'}
                                               options={{credentials: 'include'}}/>
         </Body>
     </>);

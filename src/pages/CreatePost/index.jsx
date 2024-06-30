@@ -12,7 +12,7 @@ const CreatePostPage = ({
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        fetch('http://localhost:8000/api/posts', {
+        fetch('http://localhost:8080/api/posts', {
             method: 'POST',
             body: new FormData(event.target),
             credentials: 'include',

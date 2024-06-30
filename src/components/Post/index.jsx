@@ -36,7 +36,7 @@ const Post = ({
     };
 
     const handleDeletePost = () => {
-        fetch(`http://localhost:8000/api/posts/${id}`, {
+        fetch(`http://localhost:8080/api/posts/${id}`, {
             method: 'DELETE',
             credentials: 'include',
         }).then((response) => {
@@ -50,7 +50,7 @@ const Post = ({
 
     // 본인이 작성한 게시글이면 버튼 보임
     useEffect(function updateButtonDisplay() {
-        fetch('http://localhost:8000/api/check-auth', {
+        fetch('http://localhost:8080/api/member', {
             credentials: 'include',
         })
             .then((response) => {
