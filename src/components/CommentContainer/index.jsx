@@ -22,7 +22,7 @@ const CommentContainer = ({
     const handleClickCommentRegisterButton = (event) => {
         event.preventDefault();
 
-        fetch(`http://localhost:8000/api/posts/${postId}/comments`, {
+        fetch(`http://localhost:8080/api/posts/${postId}/comments`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -41,11 +41,13 @@ const CommentContainer = ({
     };
 
     useEffect(function updateButtonDisplay() {
-        fetch(`http://localhost:8000/api/posts/${postId}/comments`)
+        fetch(`http://localhost:8080/api/posts/${postId}/comments`)
             .then((response) => {
                 if (response.ok) {
                     response.json().then((body) => {
-                        setComments(body.comments);
+                        console.log('body', body);
+
+                        setComments(body);
                     });
                 }
             });
@@ -69,8 +71,8 @@ const CommentContainer = ({
                 key={comment.id}
                 postId={postId}
                 commentId={comment.id}
-                authorImageSrc={`http://localhost:8000/${comment.author.imageUrl}`}
-                authorName={comment.author.name}
+                authorImageSrc={comment.authorImageUrl}
+                authorName={comment.authorName}
                 createdDate={comment.createdDate}
                 content={comment.content}
                 userNickname={signedNickname}

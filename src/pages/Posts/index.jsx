@@ -12,7 +12,7 @@ const PostsPage = ({
     return (<>
         <Header useUserImage={useUserImage} imageSrc={imageUrl}></Header>
         <Body>
-            <SimplePostContainerWithLoading url={'http://localhost:8000/api/posts'} isSigned={useUserImage}/>
+            <SimplePostContainerWithLoading url={'http://localhost:8080/api/posts'} isSigned={useUserImage}/>
         </Body>
     </>);
 };

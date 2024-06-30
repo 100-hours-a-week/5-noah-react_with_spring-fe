@@ -62,7 +62,7 @@ const SignUpForm = () => {
         formData.append('password', password);
         formData.append('nickname', nickname);
 
-        fetch('http://localhost:8000/api/sign-up', {
+        fetch('http://localhost:8080/api/sign-up', {
             method: 'POST',
             body: formData,
         }).then((response) => {

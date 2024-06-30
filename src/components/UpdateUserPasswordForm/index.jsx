@@ -32,8 +32,8 @@ const UpdateUserPasswordForm = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        fetch('http://localhost:8000/api/users/update/password', {
-            method: 'POST',
+        fetch('http://localhost:8080/api/member/update/password', {
+            method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
             },

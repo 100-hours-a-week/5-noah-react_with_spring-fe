@@ -14,10 +14,10 @@ const PostContainer = ({
     return (<MainContainer>
         <div className={styles.postContainer}>
             {post && <Post id={post.id} postTitle={post.title}
-                           authorImageSrc={`http://localhost:8000/${post.author.imageUrl}`}
-                           authorName={post.author.name}
+                           authorImageSrc={`${post.authorImageUrl}`}
+                           authorName={post.authorName}
                            createdDate={post.createdDate}
-                           postImageSrc={post.imageUrl ? `http://localhost:8000/${post.imageUrl}` : ''}
+                           postImageSrc={post.imageUrl ? `${post.imageUrl}` : ''}
                            postContent={post.content}
                            views={post.views} comments={post.comments}></Post>}
             {post && <CommentContainer postId={post.id} isSigned={isSigned} signedNickname={signedNickname}/>}

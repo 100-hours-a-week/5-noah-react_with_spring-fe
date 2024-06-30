@@ -55,8 +55,8 @@ const UpdateUserProfileForm = ({data}) => {
         formData.append('nickname', nickname);
 
         // INFO: form을 통해 image를 변경해도 헤더의 이미지는 변경 없음
-        fetch('http://localhost:8000/api/users/update/image-and-nickname', {
-            method: 'POST',
+        fetch('http://localhost:8080/api/member/update/image-and-nickname', {
+            method: 'PATCH',
             body: formData,
             credentials: 'include',
         }).then((response) => {
@@ -94,7 +94,7 @@ const UpdateUserProfileForm = ({data}) => {
         <BodyTitle text={'회원정보수정'}></BodyTitle>
         <form className={styles.updateUserProfileForm} onSubmit={handleSubmit}>
             <Label labelText={'프로필 사진 *'}/>
-            <LabeledInputUserImage name={'image'} defaultUserImageSrc={`http://localhost:8000/${userProfile.imageUrl}`}
+            <LabeledInputUserImage name={'image'} defaultUserImageSrc={`${userProfile.imageUrl}`}
                                    onChange={onChangeImage}/>
             <Label labelText={'이메일'}/>
             <p className={styles.userEmail}>{userProfile.email}</p>

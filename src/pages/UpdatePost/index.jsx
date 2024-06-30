@@ -18,7 +18,7 @@ const UpdatePostPage = ({
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        fetch(`http://localhost:8000/api/posts/${postId}`, {
+        fetch(`http://localhost:8080/api/posts/${postId}`, {
             method: 'PATCH',
             body: new FormData(event.target),
             credentials: 'include',
@@ -35,7 +35,7 @@ const UpdatePostPage = ({
     return (<>
         <Header useBackButton={true} useUserImage={useUserImage} imageSrc={imageUrl}></Header>
         <Body>
-            <EditPostFormWithLoading url={`http://localhost:8000/api/posts/${postId}`} bodyTitleText={'게시글 수정'}
+            <EditPostFormWithLoading url={`http://localhost:8080/api/posts/${postId}`} bodyTitleText={'게시글 수정'}
                                      onSubmit={handleSubmit}/>
         </Body>
     </>);

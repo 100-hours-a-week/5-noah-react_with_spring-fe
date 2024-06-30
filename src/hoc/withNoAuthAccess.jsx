@@ -9,7 +9,7 @@ const withNoAuthAccess = (WrappedComponent) => {
             loading,
             status,
         } = useFetch({
-            url: 'http://localhost:8080/api/check-auth',
+            url: 'http://localhost:8080/api/member',
             options: {
                 credentials: 'include',
             },
