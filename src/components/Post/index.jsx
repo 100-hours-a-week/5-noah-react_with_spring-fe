@@ -6,6 +6,8 @@ import {useEffect, useState} from 'react';
 import Modal from '../Modal';
 import {useNavigate} from 'react-router-dom';
 
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+
 const Post = ({
                   id,
                   postTitle,
@@ -36,7 +38,7 @@ const Post = ({
     };
 
     const handleDeletePost = () => {
-        fetch(`http://localhost:8080/api/posts/${id}`, {
+        fetch(`${SERVER_URL}/api/posts/${id}`, {
             method: 'DELETE',
             credentials: 'include',
         }).then((response) => {
@@ -50,7 +52,7 @@ const Post = ({
 
     // 본인이 작성한 게시글이면 버튼 보임
     useEffect(function updateButtonDisplay() {
-        fetch('http://localhost:8080/api/member', {
+        fetch(`${SERVER_URL}/api/member`, {
             credentials: 'include',
         })
             .then((response) => {

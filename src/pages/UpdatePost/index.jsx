@@ -4,6 +4,8 @@ import EditPostForm from '../../components/EditPostForm';
 import {useNavigate, useParams} from 'react-router-dom';
 import withLoading from '../../hoc/withLoading';
 
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+
 const EditPostFormWithLoading = withLoading(EditPostForm);
 
 const UpdatePostPage = ({
@@ -18,7 +20,7 @@ const UpdatePostPage = ({
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        fetch(`http://localhost:8080/api/posts/${postId}`, {
+        fetch(`${SERVER_URL}/api/posts/${postId}`, {
             method: 'PATCH',
             body: new FormData(event.target),
             credentials: 'include',
@@ -35,7 +37,7 @@ const UpdatePostPage = ({
     return (<>
         <Header useBackButton={true} useUserImage={useUserImage} imageSrc={imageUrl}></Header>
         <Body>
-            <EditPostFormWithLoading url={`http://localhost:8080/api/posts/${postId}`} bodyTitleText={'게시글 수정'}
+            <EditPostFormWithLoading url={`${SERVER_URL}/api/posts/${postId}`} bodyTitleText={'게시글 수정'}
                                      onSubmit={handleSubmit}/>
         </Body>
     </>);

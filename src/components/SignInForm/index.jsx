@@ -11,6 +11,8 @@ import useInput from '../../hooks/useInput';
 import useValidation from '../../hooks/useValidation';
 import useAllValid from '../../hooks/useAllValid';
 
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+
 const SignInForm = () => {
     const navigate = useNavigate();
 
@@ -31,7 +33,7 @@ const SignInForm = () => {
     const handleSignIn = (event) => {
         event.preventDefault();
 
-        fetch('http://localhost:8080/api/sign-in', {
+        fetch(`${SERVER_URL}/api/sign-in`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

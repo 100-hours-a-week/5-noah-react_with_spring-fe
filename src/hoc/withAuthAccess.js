@@ -1,6 +1,8 @@
 import useFetch from '../hooks/useFetch';
 import {useNavigate} from 'react-router-dom';
 
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+
 // option
 //  - true: 비회원도 접근 가능,
 //  - false, 비회원 접근 불가능
@@ -14,7 +16,7 @@ const withAuthAccess = (WrappedComponent, option) => {
             status,
             data,
         } = useFetch({
-            url: 'http://localhost:8080/api/member',
+            url: `${SERVER_URL}/api/member`,
             options: {
                 credentials: 'include',
             },

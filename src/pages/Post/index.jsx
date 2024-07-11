@@ -4,6 +4,8 @@ import withLoading from '../../hoc/withLoading';
 import {useNavigate, useParams} from 'react-router-dom';
 import {useEffect} from 'react';
 
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+
 const PostContainerWithLoading = withLoading(PostContainer);
 
 const PostPage = ({
@@ -23,7 +25,7 @@ const PostPage = ({
     return (<>
         <Header useBackButton={true} useUserImage={useUserImage} imageSrc={imageUrl}/>
         <PostContainerWithLoading isSigned={useUserImage} signedNickname={signedNickname}
-                                  url={`http://localhost:8080/api/posts/${id}`}/>
+                                  url={`${SERVER_URL}/api/posts/${id}`}/>
     </>);
 };
 

@@ -17,6 +17,8 @@ import useInput from '../../hooks/useInput';
 import useValidation from '../../hooks/useValidation';
 import useAllValid from '../../hooks/useAllValid';
 
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+
 const SignUpForm = () => {
     const navigate = useNavigate();
 
@@ -62,7 +64,7 @@ const SignUpForm = () => {
         formData.append('password', password);
         formData.append('nickname', nickname);
 
-        fetch('http://localhost:8080/api/sign-up', {
+        fetch(`${SERVER_URL}/api/sign-up`, {
             method: 'POST',
             body: formData,
         }).then((response) => {

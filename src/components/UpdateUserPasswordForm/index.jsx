@@ -12,6 +12,8 @@ import useInput from '../../hooks/useInput';
 import useValidation from '../../hooks/useValidation';
 import useAllValid from '../../hooks/useAllValid';
 
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+
 const UpdateUserPasswordForm = () => {
     const {
         value: password,
@@ -32,7 +34,7 @@ const UpdateUserPasswordForm = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        fetch('http://localhost:8080/api/member/update/password', {
+        fetch(`${SERVER_URL}/api/member/update/password`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',

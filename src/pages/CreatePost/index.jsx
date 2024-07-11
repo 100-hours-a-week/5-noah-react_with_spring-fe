@@ -3,6 +3,8 @@ import Body from '../../components/Body';
 import EditPostForm from '../../components/EditPostForm';
 import {useNavigate} from 'react-router-dom';
 
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+
 const CreatePostPage = ({
                             useUserImage,
                             imageUrl,
@@ -12,7 +14,7 @@ const CreatePostPage = ({
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        fetch('http://localhost:8080/api/posts', {
+        fetch(`${SERVER_URL}/api/posts`, {
             method: 'POST',
             body: new FormData(event.target),
             credentials: 'include',

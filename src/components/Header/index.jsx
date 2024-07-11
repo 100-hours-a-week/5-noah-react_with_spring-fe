@@ -5,6 +5,8 @@ import HeaderTitle from '../HeaderTitle';
 import UserImage from '../UserImage';
 import {Link, useNavigate} from 'react-router-dom';
 
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+
 const Header = ({
                     useBackButton,
                     useUserImage,
@@ -19,7 +21,7 @@ const Header = ({
     };
 
     const handleClickSignOut = () => {
-        fetch('http://localhost:8080/api/sign-out', {
+        fetch(`${SERVER_URL}/api/sign-out`, {
             method: 'POST',
             credentials: 'include',
         }).then((response) => {

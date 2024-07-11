@@ -4,6 +4,8 @@ import SmallButton from '../SmallButton';
 import {useState} from 'react';
 import Modal from '../Modal';
 
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+
 const Comment = ({
                      postId,
                      commentId,
@@ -30,7 +32,7 @@ const Comment = ({
     };
 
     const handleDeleteComment = () => {
-        fetch(`http://localhost:8080/api/comments/${commentId}`, {
+        fetch(`${SERVER_URL}/api/comments/${commentId}`, {
             method: 'DELETE',
             credentials: 'include',
         }).then((response) => {

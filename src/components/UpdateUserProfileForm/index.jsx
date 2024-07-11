@@ -15,6 +15,8 @@ import useInput from '../../hooks/useInput';
 import useValidation from '../../hooks/useValidation';
 import useAllValid from '../../hooks/useAllValid';
 
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+
 const UpdateUserProfileForm = ({data}) => {
     // 야매야매 코드..
     let userProfile;
@@ -55,7 +57,7 @@ const UpdateUserProfileForm = ({data}) => {
         formData.append('nickname', nickname);
 
         // INFO: form을 통해 image를 변경해도 헤더의 이미지는 변경 없음
-        fetch('http://localhost:8080/api/member/update/image-and-nickname', {
+        fetch(`${SERVER_URL}/api/member/update/image-and-nickname`, {
             method: 'PATCH',
             body: formData,
             credentials: 'include',

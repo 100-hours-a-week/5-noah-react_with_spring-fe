@@ -4,6 +4,8 @@ import Comment from '../Comment';
 import {useEffect, useState} from 'react';
 import useInput from '../../hooks/useInput';
 
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+
 const CommentContainer = ({
                               isSigned,
                               signedNickname,
@@ -22,7 +24,7 @@ const CommentContainer = ({
     const handleClickCommentRegisterButton = (event) => {
         event.preventDefault();
 
-        fetch(`http://localhost:8080/api/posts/${postId}/comments`, {
+        fetch(`${SERVER_URL}/api/posts/${postId}/comments`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -41,7 +43,7 @@ const CommentContainer = ({
     };
 
     useEffect(function updateButtonDisplay() {
-        fetch(`http://localhost:8080/api/posts/${postId}/comments`)
+        fetch(`${SERVER_URL}/api/posts/${postId}/comments`)
             .then((response) => {
                 if (response.ok) {
                     response.json().then((body) => {

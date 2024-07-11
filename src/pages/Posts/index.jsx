@@ -3,6 +3,8 @@ import Body from '../../components/Body';
 import SimplePostContainer from '../../components/SimplePostContainer';
 import withLoading from '../../hoc/withLoading';
 
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+
 const SimplePostContainerWithLoading = withLoading(SimplePostContainer);
 
 const PostsPage = ({
@@ -12,7 +14,7 @@ const PostsPage = ({
     return (<>
         <Header useUserImage={useUserImage} imageSrc={imageUrl}></Header>
         <Body>
-            <SimplePostContainerWithLoading url={'http://localhost:8080/api/posts'} isSigned={useUserImage}/>
+            <SimplePostContainerWithLoading url={`${SERVER_URL}/api/posts`} isSigned={useUserImage}/>
         </Body>
     </>);
 };
